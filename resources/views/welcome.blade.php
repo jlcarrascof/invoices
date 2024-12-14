@@ -11,6 +11,9 @@
         <h1 class="text-4xl font-bold text-blue-500">
             !Welcome to Laravel 11!
         </h1>
+        <p class="text-gray-600 mt-4">
+            This is an example using Tailwind CSS
+        </p>
     </div>
 </body>
 </html>
