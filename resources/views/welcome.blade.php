@@ -6,7 +6,7 @@
     <title>Invoicing and Inventory System</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+<body class="bg-gray-100 font-sans">
 
 </body>
 </html>
