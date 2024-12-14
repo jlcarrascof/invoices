@@ -36,5 +36,11 @@
             <p class="text-gray-600">This is the zone to create our web app</p>
         </main>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-center py-3 text-sm">
+        Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
+    </footer>
+
 </body>
 </html>
