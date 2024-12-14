@@ -13,5 +13,15 @@
         <h1 class="text-xl font-bold">Invoicing System</h1>
         <div class="text-sm">Admin User</div>
     </header>
+
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+
+        <aside class="bg-gray-800 text-white w-64 p-4 space-y-4">
+            <nav>
+                
+            </nav>
+        </aside>
+    </div>
 </body>
 </html>
