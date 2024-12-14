@@ -27,6 +27,14 @@
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Sales</a>
             </nav>
         </aside>
+
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+            <h2 class="text-2xl font-semibold mb-4">
+                Blank Page
+            </h2>
+            <p class="text-gray-600">This is the zone to create our web app</p>
+        </main>
     </div>
 </body>
 </html>
