@@ -20,6 +20,12 @@
         <aside class="bg-gray-800 text-white w-64 p-4 space-y-4">
             <nav>
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Home</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Home</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Users</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Categories</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Products</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Clients</a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Sales</a>
             </nav>
         </aside>
     </div>
