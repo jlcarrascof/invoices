@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('incomes', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('supplier_id');
+            $table->string('receipt_type', 20);
+            $table->string('receipt_series', 7)->nullable();
+            $table->string('receipt_number', 10);
+            $table->dateTime('date_time');
+            $table->decimal('tax', 4, 2);
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
