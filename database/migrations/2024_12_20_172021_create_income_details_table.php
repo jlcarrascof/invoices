@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('income_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('income_id');
+            $table->unsignedBigInteger('item_id');
+            $table->integer('quantity');
+            $table->decimal('price', 11, 2);
             $table->timestamps();
+
+            $table->foreign('income_id')->references('id')->on('incomes');
+            $table->foreign('item_id')->references('id')->on('items');
         });
     }
 
