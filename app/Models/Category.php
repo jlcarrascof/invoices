@@ -10,5 +10,11 @@ class Category extends Model
     use HasFactory;
 
     protected $table = 'categories';
-    
+    protected $fillable = ['name', 'description', 'condition'];
+
+    // Relations: one category has many items
+    public function items()
+    {
+        return $this->hasMany(Item::class, 'category_id');
+    }
 }
