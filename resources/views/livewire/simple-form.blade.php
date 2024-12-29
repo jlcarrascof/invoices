@@ -6,4 +6,7 @@
         </div>
     @endif
 
+    <form wire:submit.prevent="save">
+
+    </form>
 </div>
