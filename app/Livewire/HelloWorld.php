@@ -11,6 +11,6 @@ class HelloWorld extends Component
 
     public function render()
     {
-        return view('livewire-exercises.hello-world');
+        return view('livewire.hello-world');
     }
 }
