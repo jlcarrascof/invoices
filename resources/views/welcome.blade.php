@@ -43,5 +43,6 @@
         Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
     </footer>
 
+    @livewireScripts
 </body>
 </html>
