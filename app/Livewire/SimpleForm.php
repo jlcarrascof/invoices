@@ -10,7 +10,7 @@ class SimpleForm extends Component
     public $name;
 
     protected $rules = [
-        'name' => 'required│max:50',
+        'name' => 'required|max:50',
     ];
 
     public function save()
