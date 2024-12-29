@@ -13,6 +13,12 @@ class SimpleForm extends Component
         'name' => 'required│max:50',
     ];
 
+    public function save()
+    {
+        $this->validate();
+        session()->flash('message', 'Name saved: ' . $this->name);
+        $this->reset();
+    }
 
     public function render()
     {
