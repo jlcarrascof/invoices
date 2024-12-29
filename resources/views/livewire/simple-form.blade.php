@@ -1,4 +1,4 @@
-<div class="p-4 bg-white rounded shadow">
+<div class="p-4 bg-blue-300 rounded shadow">
 
     @if (session()->has('message'))
         <div class="bg-green-500 text-white p-2 rounded mb-4">
