@@ -6,8 +6,11 @@ use Livewire\Component;
 
 class HelloWorld extends Component
 {
+
+    public $message='Hello World from Livewire!';
+
     public function render()
     {
-        return view('livewire.hello-world');
+        return view('livewire-exercises.hello-world');
     }
 }
