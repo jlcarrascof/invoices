@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoicing and Inventory System</title>
     @vite('resources/css/app.css')
+    @livewireStyles
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
@@ -32,6 +33,7 @@
         <main class="flex-1 p-6">
             <h2 class="text-2xl font-semibold mb-4">
                 Blank Page
+                @livewire('hello-world')
             </h2>
             <p class="text-gray-600">This is the zone to create our web app</p>
         </main>
@@ -42,5 +44,6 @@
         Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
     </footer>
 
+    @livewireScripts
 </body>
 </html>
