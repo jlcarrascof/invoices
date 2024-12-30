@@ -33,9 +33,10 @@
         <main class="flex-1 p-6">
             <h2 class="text-2xl font-semibold mb-4">
                 Blank Page
-                @livewire('hello-world')
             </h2>
             <p class="text-gray-600">This is the zone to create our web app</p>
+            @livewire('hello-world')
+            @livewire('simple-form')
         </main>
     </div>
 
