@@ -1,3 +1,5 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    <table class="table-auto w-full bg-white rounded shadow">
+
+    </table>
 </div>
