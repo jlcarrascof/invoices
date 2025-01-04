@@ -9,6 +9,12 @@
         </thead>
     </table>
     <tbody>
-
+        @foreach ($data as $item)
+            <tr>
+                <td class="border px-4 py-2">{{ $item['id'] }}</td>
+                <td class="border px-4 py-2">{{ $item['name'] }}</td>
+                <td class="border px-4 py-2">{{ $item['status'] }}</td>
+            </tr>
+        @endforeach
     </tbody>
 </div>
