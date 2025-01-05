@@ -44,9 +44,14 @@
             @enderror
         </div>
 
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
-            Save
-        </button>
+        <div class="mt-4 flex space-x-4">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+                Save
+            </button>
+            <button type="button" wire:click="resetForm" class="bg-gray-500 text-white px-4 py-2 rounded">
+                Cancel
+            </button>
+        </div>
     </form>
 
     <!-- Categories Table -->
