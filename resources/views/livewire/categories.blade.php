@@ -30,4 +30,9 @@
             Guardar
         </button>
     </form>
+
+    <!-- Categories Table -->
+    <table class="table-auto w-full bg-white rounded shadow">
+
+    </table>
 </div>
