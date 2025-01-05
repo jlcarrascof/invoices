@@ -16,5 +16,14 @@
                 <span class="text-red-500 text-sm">{{ $message }}</span>
             @enderror
         </div>
+
+        <div class="mb-2">
+            <label for="description" class="block text-sm font-medium text-gray-700">Descripción</label>
+            <textarea id="description" wire:model="description" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+
+            @error('description')
+                <span class="text-red-500 text-sm">{{ $message }}</span>
+            @enderror
+        </div>
     </form>
 </div>
