@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Category;
 
 class Categories extends Component
 {
@@ -14,6 +15,11 @@ class Categories extends Component
         'name' => 'required|max:50',
         'description' => 'nullable|max:255',
     ];
+
+    public function mount()
+    {
+        $this->categories = Category::all();
+    }
 
     public function render()
     {
