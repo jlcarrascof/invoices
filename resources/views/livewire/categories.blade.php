@@ -5,4 +5,9 @@
             {{ session('message') }}
         </div>
     @endif
+
+    <!-- Formulario -->
+    <form wire:submit.prevent="save" class="mb-4">
+
+    </form>
 </div>
