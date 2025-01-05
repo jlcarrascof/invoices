@@ -15,6 +15,7 @@ class Categories extends Component
     protected $rules = [
         'name' => 'required|max:50',
         'description' => 'nullable|max:255',
+        'condition' => 'required|boolean', // Validación para el campo condition
     ];
 
     public function mount()
