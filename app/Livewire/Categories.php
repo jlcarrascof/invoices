@@ -10,6 +10,7 @@ class Categories extends Component
     public $categories = [];
     public $name;
     public $description;
+    public $condition = 1; // Predeterminado como "Activo"
 
     protected $rules = [
         'name' => 'required|max:50',
