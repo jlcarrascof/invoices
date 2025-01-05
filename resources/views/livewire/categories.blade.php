@@ -40,5 +40,14 @@
                 <th class="px-4 py-2">Descripción</th>
             </tr>
         </thead>
+        <tbody>
+            @foreach ($categories as $category)
+                <tr>
+                    <td class="border px-4 py-2">{{ $category->id }}</td>
+                    <td class="border px-4 py-2">{{ $category->name }}</td>
+                    <td class="border px-4 py-2">{{ $category->description }}</td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
 </div>
