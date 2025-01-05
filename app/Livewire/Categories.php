@@ -38,6 +38,11 @@ class Categories extends Component
         session()->flash('message', '¡Category created successfully!');
     }
 
+    public function resetForm()
+    {
+        $this->reset(['name', 'description', 'condition']);
+    }
+
     public function render()
     {
         return view('livewire.categories');
