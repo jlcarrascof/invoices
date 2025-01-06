@@ -29,9 +29,8 @@
             </nav>
         </aside>
 
-        <!-- Main content -->
         <main class="flex-1 p-6">
-            {{ $slot }}
+            @yield('content') <!-- Esto es necesario -->
         </main>
     </div>
 
