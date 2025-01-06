@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Categories;
+use App\Http\Livewire\Categories;
 
 Route::get('/', function () {
     return view('welcome');
