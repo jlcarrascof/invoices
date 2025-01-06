@@ -35,7 +35,6 @@
                 Blank Page
             </h2>
             <p class="text-gray-600">This is the zone to create our web app</p>
-            @livewire('interactive-table')
         </main>
     </div>
 
