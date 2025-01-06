@@ -31,16 +31,13 @@
 
         <!-- Main content -->
         <main class="flex-1 p-6">
-            <h2 class="text-2xl font-semibold mb-4">
-                Blank Page
-            </h2>
-            <p class="text-gray-600">This is the zone to create our web app</p>
+            {{ $slot }}
         </main>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-200 text-center py-3 text-sm">
-        Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
+        Copyright @ 2014-2025 Administrative Solutions, S.A. - All rights reserved.
     </footer>
 
     @livewireScripts
