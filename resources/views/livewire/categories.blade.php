@@ -1,3 +1,5 @@
-<div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
-</div>
+@extends('components.layouts.app')
+
+@section('content')
+<!-- Aquí va tu contenido -->
+@endsection
