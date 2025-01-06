@@ -9,7 +9,6 @@
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
-
     <header class="bg-blue-500 text-white px-4 py-3 flex justify-between items-center">
         <h1 class="text-xl font-bold">Invoicing System</h1>
         <div class="text-sm">Admin User</div>
@@ -17,7 +16,6 @@
 
     <div class="flex h-screen">
         <!-- Sidebar -->
-
         <aside class="bg-gray-800 text-white w-64 p-4 space-y-4">
             <nav>
                 <a href="/" class="block py-2 px-3 rounded hover:bg-gray-700">Home</a>
@@ -30,7 +28,7 @@
         </aside>
 
         <main class="flex-1 p-6">
-            @yield('content') <!-- Esto es necesario -->
+            @yield('content') <!-- Aquí se inyecta el contenido -->
         </main>
     </div>
 
