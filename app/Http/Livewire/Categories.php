@@ -8,6 +8,7 @@ class Categories extends Component
 {
     public function render()
     {
-        return view('livewire.categories');
+        return view('livewire.categories')
+            ->layout('components.layouts.app', ['title' => 'Gestión de Categorías']);
     }
 }
