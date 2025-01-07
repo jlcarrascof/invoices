@@ -33,7 +33,11 @@
         <!-- Campo Descripción -->
         <div>
             <label for="description" class="block text-sm font-medium text-gray-700">Descripción</label>
-            <textarea name="description" id="description" rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">{{ old('description') }}</textarea>
+            <textarea
+                name="description"
+                id="description"
+                rows="3"
+                class="mt-1 block w-full h-12 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400">{{ old('description') }}</textarea>
         </div>
 
         <!-- Campo Condición -->
