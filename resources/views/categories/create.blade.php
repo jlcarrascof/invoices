@@ -16,6 +16,11 @@
         </div>
     @endif
 
+    <form action="{{ route('categories.store') }}" method="POST" class="space-y-4">
+        @csrf
+
+    </form>
+
 
 </div>
 
