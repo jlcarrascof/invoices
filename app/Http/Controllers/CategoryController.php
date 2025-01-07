@@ -33,6 +33,9 @@ class CategoryController extends Controller
             'description' => 'nullable|max:500',
             'condition' => 'required|boolean',
         ]);
+
+        Category::create($validated);
+        return redirect()->route('categories.index')->with('success', 'Category created successfully.');
     }
 
     /**
