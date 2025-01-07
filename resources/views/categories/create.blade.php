@@ -19,6 +19,18 @@
     <form action="{{ route('categories.store') }}" method="POST" class="space-y-4">
         @csrf
 
+        <!-- Campo Nombre -->
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input type="text" name="name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" value="{{ old('name') }}">
+        </div>
+
+        <!-- Campo Descripción -->
+        <div>
+            <label for="description" class="block text-sm font-medium text-gray-700">Descripción</label>
+            <textarea name="description" id="description" rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">{{ old('description') }}</textarea>
+        </div>
+
     </form>
 
 
