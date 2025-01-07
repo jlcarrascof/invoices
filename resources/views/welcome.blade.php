@@ -31,10 +31,7 @@
 
         <!-- Main content -->
         <main class="flex-1 p-6">
-            <h2 class="text-2xl font-semibold mb-4">
-                Blank Page
-            </h2>
-            <p class="text-gray-600">This is the zone to create our web app</p>
+            @yield('content')
         </main>
     </div>
 
