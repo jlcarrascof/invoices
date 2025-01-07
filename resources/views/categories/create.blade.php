@@ -26,7 +26,7 @@
                 type="text"
                 name="name"
                 id="name"
-                class="mt-1 block w-full h-12 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400"
+                class="mt-1 block w-full h-10 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400"
                 value="{{ old('name') }}">
         </div>
 
@@ -36,8 +36,8 @@
             <textarea
                 name="description"
                 id="description"
-                rows="3"
-                class="mt-1 block w-full h-12 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400">{{ old('description') }}</textarea>
+                rows="5"
+                class="mt-1 block w-full h-16 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400">{{ old('description') }}</textarea>
         </div>
 
         <!-- Campo Condición -->
