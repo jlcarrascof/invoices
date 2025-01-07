@@ -31,6 +31,21 @@
             <textarea name="description" id="description" rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">{{ old('description') }}</textarea>
         </div>
 
+        <!-- Campo Condición -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Estado</label>
+            <div class="flex items-center space-x-4 mt-2">
+                <label class="flex items-center">
+                    <input type="radio" name="condition" value="1" class="text-blue-500 focus:ring-blue-400" checked>
+                    <span class="ml-2 text-gray-700">Activo</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="condition" value="0" class="text-blue-500 focus:ring-blue-400">
+                    <span class="ml-2 text-gray-700">Inactivo</span>
+                </label>
+            </div>
+        </div>
+
     </form>
 
 
