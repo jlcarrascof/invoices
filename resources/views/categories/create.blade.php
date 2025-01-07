@@ -5,6 +5,13 @@
 <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-2xl font-bold mb-4">Crear Categoría</h1>
 
+    <!-- Mostrar mensajes de éxito o error -->
+    @if (session('success'))
+        <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <!-- Mostrar mensajes de error -->
     @if ($errors->any())
         <div class="bg-red-100 text-red-700 p-3 rounded mb-4">
