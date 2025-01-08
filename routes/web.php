@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Livewire\Categories;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/categories', Categories::class)->name('categories');
+Route::resource('categories', CategoryController::class);
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');

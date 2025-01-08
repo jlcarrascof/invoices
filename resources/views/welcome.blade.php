@@ -20,8 +20,8 @@
 
         <aside class="bg-gray-800 text-white w-64 p-4 space-y-4">
             <nav>
-                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Home</a>
-                <a href="{{ route('categories') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Categories</a>
+                <a href="/" class="block py-2 px-3 rounded hover:bg-gray-700">Home</a>
+                <a href="{{ route('categories.create') }}" class="block py-2 px-3 rounded hover:bg-gray-700">Categories</a>
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Users</a>
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Products</a>
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-700">Clients</a>
@@ -31,10 +31,7 @@
 
         <!-- Main content -->
         <main class="flex-1 p-6">
-            <h2 class="text-2xl font-semibold mb-4">
-                Blank Page
-            </h2>
-            <p class="text-gray-600">This is the zone to create our web app</p>
+            @yield('content')
         </main>
     </div>
 
