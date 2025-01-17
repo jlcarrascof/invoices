@@ -32,5 +32,10 @@
         </tbody>
     </table>
 
+    <!-- Paginate -->
+    <div class="mt-4">
+        {{ $categories->links() }}
+    </div>
+
 </div>
 @endsection
