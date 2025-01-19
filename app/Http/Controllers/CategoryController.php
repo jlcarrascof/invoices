@@ -68,7 +68,7 @@ class CategoryController extends Controller
 
         $category->update($validated);
 
-        return redirect()->route('categories.index')->with('success', 'Categoría actualizada correctamente.');
+        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
     }
 
     /**
