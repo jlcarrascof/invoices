@@ -23,13 +23,22 @@
         <!-- Name -->
         <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" name="name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" value="{{ old('name', $category->name) }}">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                class="mt-1 block w-full h-10 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400"
+                value="{{ old('name', $category->name) }}">
         </div>
 
         <!-- Description -->
         <div>
             <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
-            <textarea name="description" id="description" rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">{{ old('description', $category->description) }}</textarea>
+            <textarea
+                name="description"
+                id="description"
+                rows="5"
+                class="mt-1 block w-full h-16 px-4 border border-gray-400 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-400">{{ old('description', $category->description) }}</textarea>
         </div>
 
         <!-- Condition -->
@@ -37,11 +46,21 @@
             <label class="block text-sm font-medium text-gray-700">Status</label>
             <div class="flex items-center space-x-4 mt-2">
                 <label class="flex items-center">
-                    <input type="radio" name="condition" value="1" class="text-blue-500 focus:ring-blue-400" {{ old('condition', $category->condition) == 1 ? 'checked' : '' }}>
+                    <input
+                        type="radio"
+                        name="condition"
+                        value="1"
+                        class="text-blue-500 focus:ring-blue-400"
+                        {{ old('condition', $category->condition) == 1 ? 'checked' : '' }}>
                     <span class="ml-2 text-gray-700">Active</span>
                 </label>
                 <label class="flex items-center">
-                    <input type="radio" name="condition" value="0" class="text-blue-500 focus:ring-blue-400" {{ old('condition', $category->condition) == 0 ? 'checked' : '' }}>
+                    <input
+                        type="radio"
+                        name="condition"
+                        value="0"
+                        class="text-blue-500 focus:ring-blue-400"
+                        {{ old('condition', $category->condition) == 0 ? 'checked' : '' }}>
                     <span class="ml-2 text-gray-700">Inactive</span>
                 </label>
             </div>
@@ -52,7 +71,6 @@
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Update</button>
             <a href="{{ route('categories.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded">Cancel</a>
         </div>
-
     </form>
 
 </div>
