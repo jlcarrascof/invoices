@@ -4,6 +4,12 @@
 <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-2xl font-bold mb-4">Categories List</h1>
 
+    @if (session('success'))
+        <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <!-- Categories Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
