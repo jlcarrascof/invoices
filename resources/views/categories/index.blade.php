@@ -4,6 +4,12 @@
 <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
     <h1 class="text-2xl font-bold mb-4">Categories List</h1>
 
+    @if (session('success'))
+        <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <!-- Categories Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
@@ -23,6 +29,10 @@
                     <td class="border px-4 py-2">
                         {{ $category->condition ? 'Active' : 'Inactive' }}
                     </td>
+                    <td class="border px-4 py-2">
+                        <!-- Edit button -->
+                        <a href="{{ route('categories.edit', $category->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                    </td>
                 </tr>
             @empty
                 <tr>
@@ -41,6 +51,5 @@
     <div class="mt-4">
         <a href="{{ route('categories.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
     </div>
-
 </div>
 @endsection

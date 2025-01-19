@@ -52,15 +52,27 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // Retrieve the category by ID
+        $category = Category::findOrFail($id);
+
+        // Pass the category to the view
+        return view('categories.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'nullable|max:500',
+            'condition' => 'required|boolean',
+        ]);
+
+        $category->update($validated);
+
+        return redirect()->route('categories.index')->with('success', 'Category updated successfully.');
     }
 
     /**
