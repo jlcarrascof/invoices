@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::resource('categories', CategoryController::class);
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
