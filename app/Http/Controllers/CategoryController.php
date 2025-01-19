@@ -60,7 +60,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'nullable|max:500',
+            'condition' => 'required|boolean',
+        ]);
     }
 
     /**
