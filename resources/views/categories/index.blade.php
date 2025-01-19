@@ -23,6 +23,10 @@
                     <td class="border px-4 py-2">
                         {{ $category->condition ? 'Active' : 'Inactive' }}
                     </td>
+                    <td class="border px-4 py-2">
+                        <!-- Edit button -->
+                        <a href="{{ route('categories.edit', $category) }}" class="text-blue-500 hover:underline">Edit</a>
+                    </td>
                 </tr>
             @empty
                 <tr>
