@@ -20,6 +20,11 @@
         @csrf
         @method('PUT')
 
+        <!-- Name -->
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input type="text" name="name" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" value="{{ old('name', $category->name) }}">
+        </div>
 
     </form>
 
