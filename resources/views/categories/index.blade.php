@@ -25,7 +25,7 @@
                     </td>
                     <td class="border px-4 py-2">
                         <!-- Edit button -->
-                        <a href="{{ route('categories.edit', $category) }}" class="text-blue-500 hover:underline">Edit</a>
+                        <a href="{{ route('categories.edit', $category->id) }}" class="text-blue-500 hover:underline">Edit</a>
                     </td>
                 </tr>
             @empty
