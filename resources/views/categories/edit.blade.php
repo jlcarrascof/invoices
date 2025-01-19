@@ -16,6 +16,13 @@
         </div>
     @endif
 
+    <form action="{{ route('categories.update', $category) }}" method="POST" class="space-y-4">
+        @csrf
+        @method('PUT')
+
+
+    </form>
+
 </div>
 
 @endsection
