@@ -41,6 +41,17 @@
                         >
                             Delete
                         </button>
+
+                        <!-- Formulario oculto para eliminación -->
+                        <form
+                            id="delete-form-{{ $category->id }}"
+                            action="{{ route('categories.destroy', $category->id) }}"
+                            method="POST"
+                            style="display: none;"
+                        >
+                            @csrf
+                            @method('DELETE')
+                        </form>
                     </td>
                 </tr>
             @empty
