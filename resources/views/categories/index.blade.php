@@ -33,6 +33,26 @@
                         <!-- Edit button -->
                         <a href="{{ route('categories.edit', $category->id) }}" class="text-blue-500 hover:underline">Edit</a>
                     </td>
+                    <td class="border px-4 py-2">
+                        <!-- Delete button -->
+                        <button
+                            onclick="confirmDelete({{ $category->id }})"
+                            class="text-red-500 hover:underline"
+                        >
+                            Delete
+                        </button>
+
+                        <!-- Hidden form for deletion -->
+                        <form
+                            id="delete-form-{{ $category->id }}"
+                            action="{{ route('categories.destroy', $category->id) }}"
+                            method="POST"
+                            style="display: none;"
+                        >
+                            @csrf
+                            @method('DELETE')
+                        </form>
+                    </td>
                 </tr>
             @empty
                 <tr>
@@ -52,4 +72,24 @@
         <a href="{{ route('categories.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
     </div>
 </div>
+
+<script>
+    function confirmDelete(categoryId) {
+        Swal.fire({
+            title: '¿Are you sure to delete?',
+            text: "¡Confirm delete, please!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Send the deletion form
+                document.getElementById(`delete-form-${categoryId}`).submit();
+            }
+        });
+    }
+</script>
 @endsection

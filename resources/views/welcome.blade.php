@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoicing and Inventory System</title>
     @vite('resources/css/app.css')
-    @livewireStyles
+    @vite('resources/js/app.js')
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
@@ -40,6 +40,5 @@
         Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
     </footer>
 
-    @livewireScripts
 </body>
 </html>
