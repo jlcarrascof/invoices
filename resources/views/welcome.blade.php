@@ -6,7 +6,6 @@
     <title>Invoicing and Inventory System</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
-    @livewireStyles
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
@@ -41,6 +40,5 @@
         Copyright @ 2014-2024 Administrative Solutions, S.A. - All rights reserved.
     </footer>
 
-    @livewireScripts
 </body>
 </html>
