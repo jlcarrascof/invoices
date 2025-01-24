@@ -61,4 +61,24 @@
         <a href="{{ route('categories.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
     </div>
 </div>
+
+<script>
+    function confirmDelete(categoryId) {
+        Swal.fire({
+            title: '¿Are you sure to delete?',
+            text: "¡Confirm delete, please!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Send the deletion form
+                document.getElementById(`delete-form-${categoryId}`).submit();
+            }
+        });
+    }
+</script>
 @endsection
