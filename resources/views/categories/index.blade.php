@@ -33,6 +33,15 @@
                         <!-- Edit button -->
                         <a href="{{ route('categories.edit', $category->id) }}" class="text-blue-500 hover:underline">Edit</a>
                     </td>
+                    <td class="border px-4 py-2">
+                        <!-- Delete button -->
+                        <button
+                            onclick="confirmDelete({{ $category->id }})"
+                            class="text-red-500 hover:underline"
+                        >
+                            Delete
+                        </button>
+                    </td>
                 </tr>
             @empty
                 <tr>
