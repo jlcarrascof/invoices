@@ -42,7 +42,7 @@
                             Delete
                         </button>
 
-                        <!-- Formulario oculto para eliminación -->
+                        <!-- Hidden form for deletion -->
                         <form
                             id="delete-form-{{ $category->id }}"
                             action="{{ route('categories.destroy', $category->id) }}"
