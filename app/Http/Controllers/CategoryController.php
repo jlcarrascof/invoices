@@ -15,6 +15,16 @@ class CategoryController extends Controller
 
         $query = Category::query();
 
+        // Filter by name
+        if ($request->filled('name')) {
+            $query->where('name', 'like', '%' . $request->name . '%');
+        }
+
+         // Filter by status
+        if ($request->filled('condition')) {
+            $query->where('condition', $request->condition);
+        }
+
         $categories = Category::paginate(10); // 10 records per page.
         return view('categories.index', compact('categories'));
     }
