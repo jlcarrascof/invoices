@@ -48,6 +48,21 @@
         </form>
     </div>
 
+    <!-- Filters Applied -->
+    @if(request('name') || request('condition'))
+        <div class="mb-4 p-3 bg-gray-100 rounded text-sm text-gray-700">
+            <strong>Filtros aplicados:</strong>
+            <ul class="list-disc pl-4">
+                @if(request('name'))
+                    <li>Nombre: "{{ request('name') }}"</li>
+                @endif
+                @if(request('condition') !== null)
+                    <li>Estado: {{ request('condition') == '1' ? 'Activo' : 'Inactivo' }}</li>
+                @endif
+            </ul>
+        </div>
+    @endif
+
     <!-- Categories Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
