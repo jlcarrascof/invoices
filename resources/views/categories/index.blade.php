@@ -24,6 +24,18 @@
                 />
             </div>
 
+            <!-- Filter by Status -->
+            <div>
+                <select
+                    name="condition"
+                    class="border border-gray-300 rounded px-4 py-2"
+                >
+                    <option value="">All</option>
+                    <option value="1" {{ request('condition') == '1' ? 'selected' : '' }}>Active</option>
+                    <option value="0" {{ request('condition') == '0' ? 'selected' : '' }}>Inactive</option>
+                </select>
+            </div>
+
 
         </form>
     </div>
