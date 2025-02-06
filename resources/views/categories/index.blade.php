@@ -51,13 +51,13 @@
     <!-- Filters Applied -->
     @if(request('name') || request('condition'))
         <div class="mb-4 p-3 bg-gray-100 rounded text-sm text-gray-700">
-            <strong>Filtros aplicados:</strong>
+            <strong>Filters applied:</strong>
             <ul class="list-disc pl-4">
                 @if(request('name'))
-                    <li>Nombre: "{{ request('name') }}"</li>
+                    <li>Name: "{{ request('name') }}"</li>
                 @endif
                 @if(request('condition') !== null)
-                    <li>Estado: {{ request('condition') == '1' ? 'Activo' : 'Inactivo' }}</li>
+                    <li>Status: {{ request('condition') == '1' ? 'Active' : 'Inactive' }}</li>
                 @endif
             </ul>
         </div>
