@@ -25,7 +25,7 @@ class CategoryController extends Controller
             $query->where('condition', $request->condition);
         }
 
-        $categories = Category::paginate(10); // 10 records per page.
+        $categories = $query->paginate(10);
         return view('categories.index', compact('categories'));
     }
 
