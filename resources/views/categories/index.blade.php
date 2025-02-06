@@ -10,6 +10,59 @@
         </div>
     @endif
 
+    <!-- Filters -->
+    <div class="mb-6">
+        <form action="{{ route('categories.index') }}" method="GET" class="flex space-x-4">
+            <!-- Filter by name -->
+            <div>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Search by name"
+                    value="{{ request('name') }}"
+                    class="border border-gray-300 rounded px-4 py-2"
+                />
+            </div>
+
+            <!-- Filter by Status -->
+            <div>
+                <select
+                    name="condition"
+                    class="border border-gray-300 rounded px-4 py-2"
+                >
+                    <option value="">All</option>
+                    <option value="1" {{ request('condition') == '1' ? 'selected' : '' }}>Active</option>
+                    <option value="0" {{ request('condition') == '0' ? 'selected' : '' }}>Inactive</option>
+                </select>
+            </div>
+
+            <!-- Search Button -->
+            <div>
+                <button
+                    type="submit"
+                    class="bg-blue-500 text-white px-4 py-2 rounded"
+                >
+                    Filter
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Filters Applied -->
+    @if(request('name') || request('condition'))
+        <div class="mb-4 p-3 bg-gray-100 rounded text-sm text-gray-700">
+            <strong>Filters applied:</strong>
+            <ul class="list-disc pl-4">
+                @if(request('name'))
+                    <li>Name: "{{ request('name') }}"</li>
+                @endif
+                @if(request('condition') !== null)
+                    <li>Status: {{ request('condition') == '1' ? 'Active' : 'Inactive' }}</li>
+                @endif
+            </ul>
+        </div>
+    @endif
+
     <!-- Categories Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
