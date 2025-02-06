@@ -13,6 +13,17 @@
     <!-- Filters -->
     <div class="mb-6">
         <form action="{{ route('categories.index') }}" method="GET" class="flex space-x-4">
+            <!-- Filter by name -->
+            <div>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Search by name"
+                    value="{{ request('name') }}"
+                    class="border border-gray-300 rounded px-4 py-2"
+                />
+            </div>
+
 
         </form>
     </div>
