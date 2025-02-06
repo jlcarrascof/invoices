@@ -10,8 +10,11 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $query = Category::query();
+
         $categories = Category::paginate(10); // 10 records per page.
         return view('categories.index', compact('categories'));
     }
