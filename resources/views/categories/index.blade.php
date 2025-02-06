@@ -10,6 +10,13 @@
         </div>
     @endif
 
+    <!-- Filters -->
+    <div class="mb-6">
+        <form action="{{ route('categories.index') }}" method="GET" class="flex space-x-4">
+
+        </form>
+    </div>
+
     <!-- Categories Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
