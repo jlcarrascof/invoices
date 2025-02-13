@@ -36,6 +36,12 @@ class SupplierController extends Controller
             'email' => 'nullable|email|max:100|unique:suppliers,email',
             'status' => 'required|boolean',
         ]);
+
+        Supplier::create($validated);
+
+        return redirect()->route('suppliers.create')->with('success', 'Supplier created successfully.');
+    }
+
     }
 
     /**
