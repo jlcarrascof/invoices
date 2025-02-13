@@ -27,7 +27,7 @@
         @csrf
 
 
-        <!-- Nombre -->
+        <!-- Name -->
         <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
             <input type="text" name="name" id="name" class="w-full px-4 py-2 border rounded" value="{{ old('name') }}">
