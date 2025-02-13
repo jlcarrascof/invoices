@@ -50,6 +50,13 @@
             </div>
         </div>
 
+
+        <!-- Address -->
+        <div>
+            <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+            <input type="text" name="address" id="address" class="w-full px-4 py-2 border rounded" value="{{ old('address') }}">
+        </div>
+
     </form>
 
 </div>
