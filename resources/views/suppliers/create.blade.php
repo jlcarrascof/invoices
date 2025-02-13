@@ -69,6 +69,15 @@
             </div>
         </div>
 
+        <!-- Status -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Estado</label>
+            <div class="flex space-x-4">
+                <label><input type="radio" name="status" value="1" checked> Active</label>
+                <label><input type="radio" name="status" value="0"> Inactive</label>
+            </div>
+        </div>
+
     </form>
 
 </div>
