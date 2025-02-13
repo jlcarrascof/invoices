@@ -33,6 +33,23 @@
             <input type="text" name="name" id="name" class="w-full px-4 py-2 border rounded" value="{{ old('name') }}">
         </div>
 
+        <!-- Tipo y Número de Documento -->
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <label for="document_type" class="block text-sm font-medium text-gray-700">Document Type</label>
+                <select name="document_type" id="document_type" class="w-full px-4 py-2 border rounded">
+                    <option value="DNI">DNI</option>
+                    <option value="RUC">RUC</option>
+                    <option value="PASSPORT">Passport</option>
+                    <option value="RIF">RIF</option>
+                </select>
+            </div>
+            <div>
+                <label for="document_number" class="block text-sm font-medium text-gray-700">Document number</label>
+                <input type="text" name="document_number" id="document_number" class="w-full px-4 py-2 border rounded" value="{{ old('document_number') }}">
+            </div>
+        </div>
+
     </form>
 
 </div>
