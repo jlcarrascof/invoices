@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
-    <h1 class="text-2xl font-bold mb-4">Crear Categoría</h1>
+    <h1 class="text-2xl font-bold mb-4">Categories</h1>
 
     <!-- Mostrar mensajes de éxito o error -->
     @if (session('success'))
