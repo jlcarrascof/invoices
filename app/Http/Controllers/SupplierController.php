@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
@@ -40,8 +41,6 @@ class SupplierController extends Controller
         Supplier::create($validated);
 
         return redirect()->route('suppliers.create')->with('success', 'Supplier created successfully.');
-    }
-
     }
 
     /**
