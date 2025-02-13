@@ -23,6 +23,11 @@
         </div>
     @endif
 
+    <form action="{{ route('suppliers.store') }}" method="POST" class="space-y-4">
+        @csrf
+
+
+    </form>
 
 </div>
 
