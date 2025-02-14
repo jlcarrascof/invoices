@@ -63,7 +63,7 @@
         </div>
     @endif
 
-    <!-- Categories Table -->
+    <!-- Suppliers Table -->
     <table class="table-auto w-full bg-gray-100 rounded">
         <thead>
             <tr class="bg-gray-200 text-left">

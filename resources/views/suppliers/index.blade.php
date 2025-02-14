@@ -77,6 +77,44 @@
         </div>
     @endif
 
+    <table class="table-auto w-full bg-gray-100 rounded">
+        <thead>
+            <tr class="bg-gray-200 text-left">
+                <th class="px-4 py-2">ID</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Document</th>
+                <th class="px-4 py-2">Phone</th>
+                <th class="px-4 py-2">Status</th>
+                <th class="px-4 py-2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse ($suppliers as $supplier)
+                <tr>
+                    <td class="border px-4 py-2">{{ $supplier->id }}</td>
+                    <td class="border px-4 py-2">{{ $supplier->name }}</td>
+                    <td class="border px-4 py-2">{{ $supplier->document_type }} - {{ $supplier->document_number }}</td>
+                    <td class="border px-4 py-2">{{ $supplier->phone }}</td>
+                    <td class="border px-4 py-2">
+                        {{ $supplier->status ? 'Activo' : 'Inactivo' }}
+                    </td>
+                    <td class="border px-4 py-2">
+                        <a href="{{ route('suppliers.edit', $supplier) }}" class="text-blue-500 hover:underline">Edit</a>
+                    </td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="6" class="text-center py-4">Suppliers not found.</td>
+                </tr>
+            @endforelse
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="mt-4">
+        {{ $suppliers->links() }}
+    </div>
+
     <!-- Button for return to main form -->
     <div class="mt-4">
         <a href="{{ route('suppliers.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
