@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
-    <h1 class="text-2xl font-bold mb-4">Categories List</h1>
+    <h1 class="text-2xl font-bold mb-4">Suppliers List</h1>
 
     @if (session('success'))
         <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
@@ -12,7 +12,7 @@
 
     <!-- Filters -->
     <div class="mb-6">
-        <form action="{{ route('categories.index') }}" method="GET" class="flex space-x-4">
+        <form action="{{ route('suppliers.index') }}" method="GET" class="flex space-x-4">
             <!-- Filter by name -->
             <div>
                 <input
@@ -27,7 +27,7 @@
             <!-- Filter by Status -->
             <div>
                 <select
-                    name="condition"
+                    name="status"
                     class="border border-gray-300 rounded px-4 py-2"
                 >
                     <option value="">All</option>
