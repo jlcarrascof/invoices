@@ -60,12 +60,15 @@
     </div>
 
     <!-- Filters Applied -->
-    @if(request('name') || request('condition'))
+    @if(request('name') || request('condition') || request('document_type'))
         <div class="mb-4 p-3 bg-gray-100 rounded text-sm text-gray-700">
             <strong>Filters applied:</strong>
             <ul class="list-disc pl-4">
                 @if(request('name'))
                     <li>Name: "{{ request('name') }}"</li>
+                @endif
+                @if(request('document_type'))
+                    <li>Document Type: "{{ request('document_type') }}"</li>
                 @endif
                 @if(request('condition') !== null)
                     <li>Status: {{ request('condition') == '1' ? 'Active' : 'Inactive' }}</li>
@@ -76,27 +79,8 @@
 
     <!-- Button for return to main form -->
     <div class="mt-4">
-        <a href="{{ route('categories.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
+        <a href="{{ route('suppliers.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Return to Form</a>
     </div>
 </div>
 
-<script>
-    function confirmDelete(categoryId) {
-        Swal.fire({
-            title: '¿Are you sure to delete?',
-            text: "¡Confirm delete, please!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes',
-            cancelButtonText: 'Cancel'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // Send the deletion form
-                document.getElementById(`delete-form-${categoryId}`).submit();
-            }
-        });
-    }
-</script>
 @endsection
