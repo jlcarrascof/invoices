@@ -28,6 +28,10 @@ class SupplierController extends Controller
         if ($request->filled('status')) {
             $query->where('status', $request->status);
         }
+
+        // Paginate
+        $suppliers = $query->orderBy('id', 'desc')->paginate(10);
+        return view('suppliers.index', compact('suppliers'));
     }
 
     /**
