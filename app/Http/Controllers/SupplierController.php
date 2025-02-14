@@ -10,9 +10,28 @@ class SupplierController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $query = Supplier::query();
+
+        // Filter by name
+        if ($request->filled('name')) {
+            $query->where('name', 'like', '%' . $request->name . '%');
+        }
+
+        // Filter by document type
+        if ($request->filled('document_type')) {
+            $query->where('document_type', $request->document_type);
+        }
+
+        // Filter by status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // Paginate
+        $suppliers = $query->orderBy('id', 'desc')->paginate(10);
+        return view('suppliers.index', compact('suppliers'));
     }
 
     /**
