@@ -24,6 +24,17 @@
                 />
             </div>
 
+            <!-- Filter by Document Type -->
+            <div>
+                <select name="document_type" class="border border-gray-300 rounded px-4 py-2">
+                    <option value="">All</option>
+                    <option value="DNI" {{ request('document_type') == 'DNI' ? 'selected' : '' }}>DNI</option>
+                    <option value="RUC" {{ request('document_type') == 'RUC' ? 'selected' : '' }}>RUC</option>
+                    <option value="PASSPORT" {{ request('document_type') == 'PASSPORT' ? 'selected' : '' }}>Passport</option>
+                    <option value="RIF" {{ request('document_type') == 'RIF' ? 'selected' : '' }}>RIF</option>
+                </select>
+            </div>
+
             <!-- Filter by Status -->
             <div>
                 <select
