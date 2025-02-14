@@ -19,7 +19,15 @@ class SupplierController extends Controller
             $query->where('name', 'like', '%' . $request->name . '%');
         }
 
+        // Filter by document type
+        if ($request->filled('document_type')) {
+            $query->where('document_type', $request->document_type);
+        }
 
+        // Filter by status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
     }
 
     /**
