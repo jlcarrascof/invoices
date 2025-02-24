@@ -14,3 +14,5 @@ Route::get('/categories/create', [CategoryController::class, 'create'])->name('c
 Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::put('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
 Route::resource('suppliers', SupplierController::class);
+
+Route::get('/categories/report', [CategoryController::class, 'generateReport'])->name('categories.report');
