@@ -19,13 +19,11 @@
     <div class="flex h-screen">
         <!-- Sidebar con Alpine.js -->
         <aside class="bg-gray-800 text-white w-64 p-4 space-y-4" x-data="{ openMenu: null }">
+
             <nav>
                 <!-- Home -->
                 <a href="/" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9.75L12 3l9 6.75V21H3V9.75z"></path>
-                    </svg>
+                    <i class="fas fa-home w-5 h-5 mr-2"></i>
                     Home
                 </a>
 
