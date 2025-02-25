@@ -44,21 +44,12 @@
 
                 <!-- Proveedores con Submenú -->
                 <div>
-                    <button @click="openMenu = (openMenu === 'suppliers' ? null : 'suppliers')"
-                        class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
+                    <button @click="openMenu = (openMenu === 'suppliers' ? null : 'suppliers')" class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"></path>
-                            </svg>
+                            <i class="fas fa-truck w-5 h-5 mr-2"></i>
                             Suppliers
                         </span>
-                        <svg class="w-4 h-4 transition-transform"
-                            :class="{ 'rotate-180': openMenu === 'suppliers' }"
-                            fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'suppliers' }"></i>
                     </button>
                     <div x-show="openMenu === 'suppliers'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('suppliers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
