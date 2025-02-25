@@ -77,7 +77,7 @@
                 </div>
 
                 <!-- Clientes -->
-                <a href="{{ route('clients.create') }}" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
+                <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 15a7 7 0 0 1 14 0"></path>
@@ -88,7 +88,7 @@
                 </a>
 
                 <!-- Productos -->
-                <a href="{{ route('products.create') }}" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
+                <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 12h16"></path>
@@ -98,7 +98,7 @@
                 </a>
 
                 <!-- Ventas -->
-                <a href="{{ route('sales.index') }}" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
+                <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 12h18"></path>
