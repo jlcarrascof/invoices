@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Supplier;
 use Illuminate\Http\Request;
+use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
@@ -14,25 +14,23 @@ class SupplierController extends Controller
     {
         $query = Supplier::query();
 
-        // Filter by name ...
-
+        // Filter by name
         if ($request->filled('name')) {
-            $query->where('name', 'like', '%' .$request->name. '%');
+            $query->where('name', 'like', '%' . $request->name . '%');
         }
 
-        // Filter by Type of Document ...
-
+        // Filter by document type
         if ($request->filled('document_type')) {
             $query->where('document_type', $request->document_type);
         }
 
-        // Filter by status ...
-
+        // Filter by status
         if ($request->filled('status')) {
             $query->where('status', $request->status);
         }
 
-        $suppliers = $query->paginate(10);
+        // Paginate
+        $suppliers = $query->orderBy('id', 'desc')->paginate(10);
         return view('suppliers.index', compact('suppliers'));
     }
 
@@ -52,7 +50,7 @@ class SupplierController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:100',
             'document_type' => 'required|string|max:20',
-            'document_number' => 'required|string|max:20',
+            'document_number' => 'required|string|max:20|unique:suppliers,document_number',
             'address' => 'nullable|string|max:256',
             'phone' => 'nullable|string|max:20',
             'email' => 'nullable|email|max:100|unique:suppliers,email',
@@ -60,7 +58,8 @@ class SupplierController extends Controller
         ]);
 
         Supplier::create($validated);
-        return redirect()->route('suppliers.create')->with('success', ' Supplier created successfully');
+
+        return redirect()->route('suppliers.create')->with('success', 'Supplier created successfully.');
     }
 
     /**
@@ -76,38 +75,22 @@ class SupplierController extends Controller
      */
     public function edit(string $id)
     {
-        $supplier = Supplier::findOrFail($id);
-
-        return view('suppliers.edit', compact('supplier'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Supplier $supplier)
+    public function update(Request $request, string $id)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:100',
-            'document_type' => 'required|string|max:20',
-            'document_number' => 'required|string|max:20',
-            'address' => 'nullable|string|max:256',
-            'phone' => 'nullable|string|max:20',
-            'email' => 'nullable|email|max:100',
-            'status' => 'required|boolean',
-        ]);
-
-        $supplier->update($validated);
-
-        return redirect()->route('suppliers.index')->with('success', 'Supplier updated successfully');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Supplier $supplier)
+    public function destroy(string $id)
     {
-        $supplier->delete();
-
-        return redirect()->route('suppliers.index')->with('success', 'Supplier deleted successfully');
+        //
     }
 }
