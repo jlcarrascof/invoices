@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Supplier;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
-class SupplierController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
-        $query = Supplier::query();
+        $query = Customer::query();
 
         // Filter by name ...
 
@@ -32,8 +32,8 @@ class SupplierController extends Controller
             $query->where('status', $request->status);
         }
 
-        $suppliers = $query->paginate(10);
-        return view('suppliers.index', compact('suppliers'));
+        $customers = $query->paginate(10);
+        return view('customers.index', compact('customers'));
     }
 
     /**
@@ -41,7 +41,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('suppliers.create');
+        return view('customers.create');
     }
 
     /**
@@ -55,12 +55,12 @@ class SupplierController extends Controller
             'document_number' => 'required|string|max:20',
             'address' => 'nullable|string|max:256',
             'phone' => 'nullable|string|max:20',
-            'email' => 'nullable|email|max:100|unique:suppliers,email',
+            'email' => 'nullable|email|max:100|unique:customers,email',
             'status' => 'required|boolean',
         ]);
 
-        Supplier::create($validated);
-        return redirect()->route('suppliers.create')->with('success', ' Supplier created successfully');
+        Customer::create($validated);
+        return redirect()->route('customers.create')->with('success', ' Customer created successfully');
     }
 
     /**
@@ -76,15 +76,15 @@ class SupplierController extends Controller
      */
     public function edit(string $id)
     {
-        $supplier = Supplier::findOrFail($id);
+        $customer = Customer::findOrFail($id);
 
-        return view('suppliers.edit', compact('supplier'));
+        return view('customers.edit', compact('customer'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Supplier $supplier)
+    public function update(Request $request, Customer $customer)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:100',
@@ -96,18 +96,18 @@ class SupplierController extends Controller
             'status' => 'required|boolean',
         ]);
 
-        $supplier->update($validated);
+        $customer->update($validated);
 
-        return redirect()->route('suppliers.index')->with('success', 'Supplier updated successfully');
+        return redirect()->route('customers.index')->with('success', 'Customer updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Supplier $supplier)
+    public function destroy(Customer $customer)
     {
-        $supplier->delete();
+        $customer->delete();
 
-        return redirect()->route('suppliers.index')->with('success', 'Supplier deleted successfully');
+        return redirect()->route('customers.index')->with('success', 'Customer deleted successfully');
     }
 }

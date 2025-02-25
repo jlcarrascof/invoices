@@ -7,6 +7,7 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
@@ -18,33 +19,22 @@
     <div class="flex h-screen">
         <!-- Sidebar con Alpine.js -->
         <aside class="bg-gray-800 text-white w-64 p-4 space-y-4" x-data="{ openMenu: null }">
+
             <nav>
                 <!-- Home -->
                 <a href="/" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 9.75L12 3l9 6.75V21H3V9.75z"></path>
-                    </svg>
+                    <i class="fas fa-home w-5 h-5 mr-2"></i>
                     Home
                 </a>
 
-                <!-- Categorías con Submenú -->
+                <!-- Categories with Submenu -->
                 <div>
-                    <button @click="openMenu = (openMenu === 'categories' ? null : 'categories')"
-                        class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
+                    <button @click="openMenu = (openMenu === 'categories' ? null : 'categories')" class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"></path>
-                            </svg>
+                            <i class="fas fa-boxes w-5 h-5 mr-2"></i>
                             Categories
                         </span>
-                        <svg class="w-4 h-4 transition-transform"
-                            :class="{ 'rotate-180': openMenu === 'categories' }"
-                            fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'categories' }"></i>
                     </button>
                     <div x-show="openMenu === 'categories'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('categories.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
@@ -52,23 +42,14 @@
                     </div>
                 </div>
 
-                <!-- Proveedores con Submenú -->
+                <!-- Suppliers with Submenu -->
                 <div>
-                    <button @click="openMenu = (openMenu === 'suppliers' ? null : 'suppliers')"
-                        class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
+                    <button @click="openMenu = (openMenu === 'suppliers' ? null : 'suppliers')" class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"></path>
-                            </svg>
+                            <i class="fas fa-truck w-5 h-5 mr-2"></i>
                             Suppliers
                         </span>
-                        <svg class="w-4 h-4 transition-transform"
-                            :class="{ 'rotate-180': openMenu === 'suppliers' }"
-                            fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'suppliers' }"></i>
                     </button>
                     <div x-show="openMenu === 'suppliers'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('suppliers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
@@ -78,45 +59,24 @@
 
                 <!-- Customers with Submenu -->
                 <div>
-                    <button @click="openMenu = (openMenu === 'customers' ? null : 'customers')"
-                        class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
+                    <button @click="openMenu = (openMenu === 'customers' ? null : 'customers')" class="flex items-center justify-between w-full py-2 px-3 rounded hover:bg-gray-700">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"></path>
-                            </svg>
+                            <i class="fas fa-users w-5 h-5 mr-2"></i>
                             Customers
                         </span>
-                        <svg class="w-4 h-4 transition-transform"
-                            :class="{ 'rotate-180': openMenu === 'customers' }"
-                            fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'customers' }"></i>
                     </button>
                     <div x-show="openMenu === 'customers'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('customers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
                         <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
                     </div>
                 </div>
-
-                <!-- Productos -->
                 <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 12h16"></path>
-                        <path d="M12 4v16"></path>
-                    </svg>
+                    <i class="fas fa-cube w-5 h-5 mr-2"></i>
                     Products
                 </a>
-
-                <!-- Ventas -->
                 <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 12h18"></path>
-                        <path d="M8 5l8 7-8 7"></path>
-                    </svg>
+                    <i class="fas fa-shopping-cart w-5 h-5 mr-2"></i>
                     Sales
                 </a>
             </nav>
