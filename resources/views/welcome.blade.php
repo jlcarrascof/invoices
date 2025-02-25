@@ -72,7 +72,7 @@
                     </button>
                     <div x-show="openMenu === 'suppliers'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('suppliers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
-                        <a href="{{ route('suppliers.report') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
+                        <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
                     </div>
                 </div>
 
