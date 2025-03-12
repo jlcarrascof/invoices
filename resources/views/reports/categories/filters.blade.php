@@ -29,6 +29,15 @@
             </div>
         </div>
 
+        <!-- Ordenar por -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Ordenar por</label>
+            <select name="order_by" class="w-full px-4 py-2 border rounded">
+                <option value="name">Nombre (A-Z)</option>
+                <option value="condition">Estado (Activo/Inactivo)</option>
+            </select>
+        </div>
+
     </form>
 </div>
 @endsection
