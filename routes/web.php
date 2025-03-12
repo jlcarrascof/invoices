@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CategoryReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
