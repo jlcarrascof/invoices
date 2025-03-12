@@ -17,6 +17,18 @@
             </select>
         </div>
 
+        <!-- Rango de ID (oculto por defecto) -->
+        <div x-show="rangeEnabled" class="grid grid-cols-2 gap-4">
+            <div>
+                <label for="from_id" class="block text-sm font-medium text-gray-700">Desde ID</label>
+                <input type="number" name="from_id" id="from_id" class="w-full px-4 py-2 border rounded">
+            </div>
+            <div>
+                <label for="to_id" class="block text-sm font-medium text-gray-700">Hasta ID</label>
+                <input type="number" name="to_id" id="to_id" class="w-full px-4 py-2 border rounded">
+            </div>
+        </div>
+
     </form>
 </div>
 @endsection
