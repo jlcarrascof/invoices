@@ -38,6 +38,15 @@
             </select>
         </div>
 
+        <!-- Dónde abrir el reporte -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Abrir Reporte en</label>
+            <select name="window" class="w-full px-4 py-2 border rounded" @change="windowTarget = ($event.target.value === 'new') ? '_blank' : ''">
+                <option value="same">Misma ventana</option>
+                <option value="new">Nueva ventana</option>
+            </select>
+        </div>
+
         <!-- Botones -->
         <div class="flex justify-end space-x-3">
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Generar Reporte</button>
