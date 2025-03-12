@@ -8,6 +8,15 @@
     <form action="{{ route('categories.report.view') }}" method="GET" class="space-y-4">
         @csrf
 
+        <!-- Tipo de Reporte -->
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Tipo de Reporte</label>
+            <select name="report_type" id="report_type" class="w-full px-4 py-2 border rounded" x-data="{ rangeEnabled: false }" @change="rangeEnabled = ($event.target.value === 'range')">
+                <option value="all">Todas las Categorías</option>
+                <option value="range">Por Rango de ID</option>
+            </select>
+        </div>
+
     </form>
 </div>
 @endsection
