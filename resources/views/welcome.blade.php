@@ -37,8 +37,8 @@
                         <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'categories' }"></i>
                     </button>
                     <div x-show="openMenu === 'categories'" x-collapse class="ml-6 mt-1">
-                        <a href="{{ route('categories.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
-                        <a href="{{ route('categories.report') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
+                        <a href="{{ route('categories.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Data Management</a>
+                        <a href="{{ route('categories.reports') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reports</a>
                     </div>
                 </div>
 
@@ -52,8 +52,8 @@
                         <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'suppliers' }"></i>
                     </button>
                     <div x-show="openMenu === 'suppliers'" x-collapse class="ml-6 mt-1">
-                        <a href="{{ route('suppliers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
-                        <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
+                        <a href="{{ route('suppliers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Data Management</a>
+                        <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reports</a>
                     </div>
                 </div>
 
@@ -67,8 +67,8 @@
                         <i class="fas fa-chevron-down w-4 h-4 transition-transform" :class="{ 'rotate-180': openMenu === 'customers' }"></i>
                     </button>
                     <div x-show="openMenu === 'customers'" x-collapse class="ml-6 mt-1">
-                        <a href="{{ route('customers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Mantenimiento</a>
-                        <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reportes</a>
+                        <a href="{{ route('customers.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Data Management</a>
+                        <a href="" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reports</a>
                     </div>
                 </div>
                 <a href="" class="flex items-center py-2 px-3 rounded hover:bg-gray-700">
