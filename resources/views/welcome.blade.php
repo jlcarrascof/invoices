@@ -38,7 +38,7 @@
                     </button>
                     <div x-show="openMenu === 'categories'" x-collapse class="ml-6 mt-1">
                         <a href="{{ route('categories.create') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📂 Data Management</a>
-                        <a href="{{ route('categories.report') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reports</a>
+                        <a href="{{ route('categories.reports') }}" class="block py-2 px-3 rounded hover:bg-gray-600">📊 Reports</a>
                     </div>
                 </div>
 
