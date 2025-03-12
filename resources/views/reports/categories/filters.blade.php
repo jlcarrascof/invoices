@@ -38,6 +38,12 @@
             </select>
         </div>
 
+        <!-- Botones -->
+        <div class="flex justify-end space-x-3">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Generar Reporte</button>
+            <button type="reset" class="bg-gray-500 text-white px-4 py-2 rounded">Cancelar</button>
+        </div>
+
     </form>
 </div>
 @endsection
