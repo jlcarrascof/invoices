@@ -5,7 +5,6 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryReportController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestReportController;
 
 Route::get('/', function () {
     return view('welcome');
