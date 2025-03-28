@@ -1,6 +1,6 @@
 <?php
 
-/*
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -13,16 +13,5 @@ class CategoryReportController extends Controller
         // return view('welcome');
         return 'Hello world';
 
-    }
-}
-*/
-
-namespace App\Http\Controllers;
-
-class CategoryReportController
-{
-    public function index()
-    {
-        return '¡Hola, mundo!';
     }
 }
