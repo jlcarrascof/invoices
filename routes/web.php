@@ -23,3 +23,8 @@ Route::resource('suppliers', SupplierController::class);
 Route::resource('customers', CustomerController::class);
 
 Route::get('/categories/reports', [CategoryReportController::class, 'index'])->name('categories.reports');
+
+// routes/web.php
+Route::get('/test', function() {
+    return view('test');
+});
