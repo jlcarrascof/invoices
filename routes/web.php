@@ -23,6 +23,4 @@ Route::resource('suppliers', SupplierController::class);
 
 Route::resource('customers', CustomerController::class);
 
-// Route::get('/categories/reports', [CategoryReportController::class, 'index'])->name('categories.reports');
-
-Route::get('/categories/reports', [TestReportController::class, 'index'])->name('categories.reports');
+Route::get('/categories/reports', [CategoryReportController::class, 'index'])->name('categories.reports');
