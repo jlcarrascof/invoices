@@ -22,7 +22,7 @@ Route::resource('suppliers', SupplierController::class);
 
 Route::resource('customers', CustomerController::class);
 
-Route::get('/categories/reports', [CategoryReportController::class, 'index'])->name('categories.reports');
+Route::get('/reports/categories', [CategoryReportController::class, 'index'])->name('reports.categories');
 
 // routes/web.php
 Route::get('/test', function() {
