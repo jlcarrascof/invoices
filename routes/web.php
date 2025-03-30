@@ -5,7 +5,6 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoryReportController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestReportController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +22,9 @@ Route::resource('suppliers', SupplierController::class);
 
 Route::resource('customers', CustomerController::class);
 
-// Route::get('/categories/reports', [CategoryReportController::class, 'index'])->name('categories.reports');
+Route::get('/reports/categories', [CategoryReportController::class, 'index'])->name('reports.categories');
 
-Route::get('/categories/reports', [TestReportController::class, 'index'])->name('categories.reports');
+// routes/web.php
+Route::get('/test', function() {
+    return view('test');
+});
